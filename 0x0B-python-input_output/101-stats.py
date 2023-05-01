@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""Reads from standard input and computes metrics.
 
+After every ten lines or the input of a keyboard interruption (CTRL + C),
+prints the following statistics:
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
 """
-101-stats Module
-"""
-
 if __name__ == '__main__':
 
     import sys
@@ -14,7 +16,7 @@ if __name__ == '__main__':
     counter = 0
 
     def print_stats(stats: dict, file_size: int) -> None:
-        print("File size: {:d}".format(file_size))
+        print("Total: {:d}".format(file_size))
         for k, v in sorted(stats.items()):
             if v:
                 print("{}: {}".format(k, v))
@@ -39,4 +41,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print_stats(stats, file_size)
         raise
-    
