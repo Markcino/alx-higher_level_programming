@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+import random
+import sys
+from time import sleep
+import datetime
 
 """
 101-stats Module
 """
 
 if __name__ == '__main__':
-
-    import sys
 
     file_size = 0
     valid_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
@@ -39,4 +41,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print_stats(stats, file_size)
         raise
-    
