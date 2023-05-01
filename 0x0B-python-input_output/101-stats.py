@@ -14,7 +14,7 @@ if __name__ == '__main__':
     counter = 0
 
     def print_stats(stats: dict, file_size: int) -> None:
-        print("File size: {:d}".format(file_size))
+        print("Total: {:d}".format(file_size))
         for k, v in sorted(stats.items()):
             if v:
                 print("{}: {}".format(k, v))
@@ -39,4 +39,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print_stats(stats, file_size)
         raise
-    
