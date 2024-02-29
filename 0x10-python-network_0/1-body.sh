@@ -1,9 +1,3 @@
 #!/bin/bash
-
-URL=$1
-
-response=$(curl -s -o /dev/null -w "%{http_code}" $URL)
-
-if [[ $response -eq 200 ]]; then
-    curl -s $URL
-fi
+# displays body of 200 status code response
+curl -sL $1
